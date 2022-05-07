@@ -1,0 +1,220 @@
+body {
+ font-family: 'Roboto', sans-serif;
+ font-weight: 400;
+}
+body * {
+    box-sizing: border-box;
+}
+h1,h2,h3,p {
+    margin: 0 0 .75em 0;
+}
+figure,ul {
+    padding: 0;
+    margin: 0;
+}
+ul {
+    list-style: none;
+}
+.features {
+    background-color: #e5e5e5;
+    margin: 30em 0;
+    padding: 4em 0;
+    color:rgb(39, 49, 49);
+}
+.features header {
+    text-align: center;
+    /* background-color: darkgreen; */
+    padding: 1em 0 .5em 0 ;
+}
+.features header h1 {
+    font-size: 1.75em;
+}
+.features header h2 {
+    font-size: 1em;
+    font-weight: 400;
+}
+.features h3 {
+    position: relative;
+    /* background-color: brown; */
+    padding:0.5em 1.75em;
+}
+.features h2,.features ul p {
+    color:slategrey;
+}
+.features h3::after{
+    content: "";
+    display: block;
+    background-color: #fff;
+    height: 3em;
+    width: 3em;
+    border-radius: 1.5em;
+
+    position: absolute;
+    bottom: -2.5em; 
+}
+.features ul:first-child h3::after {
+   right: -2.5em;
+}
+.features ul:last-child h3::after {
+    left: -2.5em;
+}
+.features .row {
+    /* background-color: brown; */
+    padding: .5em 0 2em 0;
+}
+.features .row > * {
+    width: 33.33%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.features .row figure {
+    padding: 0 5% ;
+}
+.features .row ul:first-child {
+    padding-right:0 5% 0 2.5%;
+    text-align: right;
+}
+.features .row ul:last-child {
+    padding-left:0 2.5% 0 5%;
+}
+.features ul:first-child p {
+    padding: 1em;
+    line-height: 1.5em;
+    /* background-color: green; */
+    border: 2px solid rgb(192, 190, 190);
+    border-right: 0;
+
+    transition: .25s;
+    position: relative;
+}
+.features ul:last-child p {
+     padding: 1em;
+    line-height: 1.5em;
+    /* background-color: green; */
+    border: 2px solid rgb(192, 190, 190);
+    border-left: 0;
+
+    transition: .25s;
+    position: relative;
+}
+.features ul:first-child p::after {
+    content: "";
+    background-color: #E5E5E5;
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 1.5em;
+    transition: .25s;
+}
+.features ul:last-child p::after {
+    content: "";
+    background-color: #E5E5E5;
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1.5em;
+    transition: .25s;
+}
+.features ul li:hover h3::after {
+    background-color: rgb(0, 68, 255);
+} 
+.features ul li:hover p {
+    border-color: rgb(0, 68, 255);
+}
+.features ul li:hover p::after {
+    width: 35%;
+
+}
+.features .row ul li {
+    padding: 1.25em 1.25%;
+
+}
+.features .row img {
+    width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+   width: 70%; 
+   /* background-color: #ddd; */
+}
+@media (max-width: 1500px)  {
+  .container {
+   width: 84%; 
+}  
+}
+@media (max-width: 1200px)  {
+  .container {
+   width: 84%; 
+} 
+.features ul:first-child h3 {
+    padding-right: 3.5em;
+    padding-bottom: 0;
+    
+}
+.features ul:last-child h3 {
+    padding-left: 3.5em;
+    padding-bottom: 0;
+}
+.features .row figure {
+  display: none;
+}
+.features .row>ul {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+}
+.features ul:first-child h3::after {
+    margin-right: 2.5em;
+}
+.features ul:last-child h3::after {
+    margin-left: 2.5em;
+}
+.features ul:first-child p {
+    padding: 1.5em 3em 1em .5em;
+}
+.features ul:last-child p {
+    padding: 1.5em .5em 1em 3em;
+}
+}
+/* MOBILE */
+@media (max-width: 900px) {
+.features {
+     padding: 2em 0;    
+ }   
+.features h3 {
+    padding-left: 3.25em;
+    padding-bottom: 0;
+} 
+.features .row>ul {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 1.5%;
+
+}
+.features .row ul:first-child {
+    padding-right:0 5% 0 2.5%;
+    text-align: left;
+}
+.features ul:first-child h3::after {
+   left:-2px;
+}
+.features ul:first-child p {
+    padding: 1.5em 1em 1em 3em;
+    border-right: 2px solid rgb(192, 190, 190);
+    border-left: 0;
+}
+.features ul:first-child p::after {
+    content: "";
+    background-color: #E5E5E5;
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1.5em;
+    transition: .25s;
+}
+}
